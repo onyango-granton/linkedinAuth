@@ -2,7 +2,7 @@ import {BrowserRouter, Routes, Route} from 'react-router-dom';
 // Importing necessary components from react-router-dom for routing functionality
 import LoginButton from './components/LoginButton'; 
 // Importing the LoginButton component
-import Profile from './pages/profile'; 
+import Profile from './pages/Profile'; 
 // Importing the Profile page component
 
 function App() {
