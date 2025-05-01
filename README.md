@@ -36,6 +36,12 @@ LinkedInAuth/
 3. Set up the Express server in `server/app.js` to handle login, session, and redirect.
 4. Use environment variables for LinkedIn client ID and secret.
 
+   > **Note:** Please create a `.env` file within the `server` directory and add the following variables:
+   > ```
+   > LINKEDIN_CLIENT_ID=your-client-id
+   > LINKEDIN_CLIENT_SECRET=your-client-secret
+   > ```
+
 ## Frontend Setup (React)
 
 1. Create a React app and install dependencies:
