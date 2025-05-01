@@ -9,7 +9,7 @@ const app = express(); // Create an Express application
 app.use(cors({ origin: 'http://localhost:3000', credentials: true }));
 
 // Configure session middleware with a secret key from environment variables
-app.use(session({ secret: process.env.LINKEDIN_SECRET_KEY, resave: false, saveUninitialized: true }));
+app.use(session({ secret: "WPL_AP1.kG9EzWozjoJAx38A.XG/PGw==", resave: false, saveUninitialized: true }));
 
 // Initialize Passport for authentication and manage user sessions
 app.use(passport.initialize());
