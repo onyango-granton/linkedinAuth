@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import {BrowserRouter, Routes, Route} from 'react-router-dom'; 
+// Importing necessary components from react-router-dom for routing functionality
+import LoginButton from './components/LoginButton'; 
+// Importing the LoginButton component
+import Profile from './pages/profile'; 
+// Importing the Profile page component
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <BrowserRouter>
+      {/* BrowserRouter is used to enable routing in the application */}
+      <Routes>
+        {/* Routes is a container for all Route components */}
+        <Route path="/" element={<LoginButton/>} />
+        {/* Route for the home page, rendering the LoginButton component */}
+        <Route path="/profile" element={<Profile />} />
+        {/* Route for the profile page, rendering the Profile component */}
+      </Routes>
+    </BrowserRouter>
+  )
 }
 
-export default App;
+export default App; 
+// Exporting the App component as the default export
