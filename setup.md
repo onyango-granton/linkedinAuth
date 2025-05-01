@@ -17,6 +17,15 @@ LinkedinAuth/
 ├── .env                  # Environment variables (CLIENT_ID, SECRET)
 
 ## Backend
+```
 $ cd server
 $ npm init -y
 $ npm install express passport passport-linkedin-oauth2 express-session cors dotenv
+```
+
+## Frontend
+```
+npx create-react-app client
+cd client
+npm install axios react-router-dom
+```
