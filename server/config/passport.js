@@ -1,20 +1,18 @@
 const passport = require('passport');
 const LinkedInStrategy = require('passport-linkedin-oauth2').Strategy;
 
-// Configure the LinkedIn OAuth2 strategy for Passport
 passport.use(new LinkedInStrategy({
-    clientID: process.env.LINKEDIN_CLIENT_ID, // LinkedIn App Client ID from environment variables
-    clientSecret: process.env.LINKEDIN_CLIENT_SECRET, // LinkedIn App Client Secret from environment variables
-    callbackURL: "http://localhost:5000/auth/linkedin/callback", // URL to redirect to after LinkedIn authentication
-    scope: ['openid', 'profile', 'email'], // Permissions to request from LinkedIn
+    clientID: process.env.LINKEDIN_CLIENT_ID,
+    clientSecret: process.env.LINKEDIN_CLIENT_SECRET,
+    callbackURL: "http://localhost:5000/auth/linkedin/callback",
+    scope: ['openid', 'profile', 'email'],
+    state: true,
+    profileFields: ['id', 'first-name', 'last-name', 'email-address', 'headline']
 }, (accessToken, refreshToken, profile, done) => {
-    // Callback function after successful authentication
-    // 'profile' contains the user's LinkedIn profile information
-    return done(null, profile); // Pass the profile to the next middleware
+    // Log the profile to see what's coming back
+    console.log('LinkedIn profile:', JSON.stringify(profile, null, 2));
+    return done(null, profile);
 }));
 
-// Serialize user information into the session
 passport.serializeUser((user, done) => done(null, user));
-
-// Deserialize user information from the session
 passport.deserializeUser((user, done) => done(null, user));
