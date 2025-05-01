@@ -4,6 +4,7 @@ const passport = require('passport'); // Import Passport for authentication
 const session = require('express-session'); // Import session middleware
 const cors = require('cors'); // Import CORS middleware
 const app = express(); // Create an Express application
+require("./config/passport")
 
 // Enable CORS to allow requests from the React frontend
 app.use(cors({ origin: 'http://localhost:3000', credentials: true }));
