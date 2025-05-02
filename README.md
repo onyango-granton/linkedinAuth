@@ -2,6 +2,14 @@
 
 This project demonstrates how to implement LinkedIn OAuth login in a full-stack web application using React for the frontend and Node.js/Express for the backend. Users can log in using their LinkedIn account, and the app fetches their profile data.
 
+## Key Features
+
+- Secure OAuth 2.0 authentication with LinkedIn
+- User profile data retrieval
+- Session management
+- Responsive React frontend
+- RESTful API backend
+
 ## Project Structure
 
 ```
@@ -14,7 +22,7 @@ LinkedInAuth/
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/your-username/linkedin-oauth-login.git
+    git clone https://github.com/onyango-granton/linkedin-oauth-login.git
     cd linkedin-oauth-login
     ```
 
@@ -70,6 +78,14 @@ npm start
 ```
 
 Visit: [http://localhost:3000](http://localhost:3000)
+
+## Security Considerations
+
+- Always use HTTPS in production
+- Implement proper session management
+- Store sensitive data securely
+- Validate all user inputs
+- Keep dependencies updated
 
 ## License
 
